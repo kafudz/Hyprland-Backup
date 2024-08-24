@@ -1,1 +1,1 @@
-config backup
+i3 config
