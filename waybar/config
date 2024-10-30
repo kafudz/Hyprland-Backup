@@ -13,11 +13,11 @@
         "hyprland/window"
     ],
     "modules-center": [
-        "custom/media"
+     // "custom/media"
     ],
     "modules-right": [
      // "mpd",
-        "hyprland/language",
+     // "hyprland/language",
      // "idle_inhibitor",
         "pulseaudio",
         "network",
