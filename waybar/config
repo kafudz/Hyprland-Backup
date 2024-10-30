@@ -13,7 +13,7 @@
         "hyprland/window"
     ],
     "modules-center": [
-     // "custom/media"
+        "custom/media"
     ],
     "modules-right": [
      // "mpd",
