@@ -2,23 +2,18 @@
 {
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 32, // Waybar height (to be removed for auto height)
-    "width": 1920, // Waybar width
-    "spacing": 1, // Gaps between modules (4px)
+    "height": 34, // Waybar height (to be removed for auto height)
+    "width": 1900, // Waybar width
+    "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "hyprland/workspaces",
-     // "hyprland/mode",
-     // "hyprland/scratchpad",
+        "hyprland/workspaces"
         "hyprland/window"
     ],
     "modules-center": [
         "custom/media"
     ],
     "modules-right": [
-     // "mpd",
-     // "hyprland/language",
-     // "idle_inhibitor",
         "pulseaudio",
         "network",
         "power-profiles-daemon",
@@ -26,9 +21,7 @@
         "memory",
         "temperature",
         "backlight",
-     // "keyboard-state",
         "battery",
-     // "battery#bat0",
         "clock",
         "tray",
         "custom/power"
