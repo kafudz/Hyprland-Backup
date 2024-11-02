@@ -1,38 +1,22 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 window#waybar {
     background-color: rgba(43, 48, 59, 0.5);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+    border-bottom: 2px transparent;
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
+    border-radius: 10px;
 }
 
 window#waybar.hidden {
     opacity: 0.2;
 }
 
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-
-window#waybar.termite {
-    background-color: #3F3F3F;
-}
-
-window#waybar.chromium {
-    background-color: #000000;
-    border: none;
-}
-*/
 button {
     /* Use box-shadow instead of border so the text isn't offset */
     box-shadow: inset 0 -3px transparent;
@@ -50,6 +34,7 @@ button:hover {
 /* you can set a style on hover for any module like this */
 #pulseaudio:hover {
     background-color: #a37800;
+    color: #ffffff;
 }
 
 #workspaces button {
@@ -64,11 +49,13 @@ button:hover {
 
 #workspaces button.active {
     background-color: transparent;
-    box-shadow: inset 0 -3px #ff0000;
+    box-shadow: transparent;
+    color: #33ccff;
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+    background-color: transparent;
+    color: #eb4d4b;
 }
 
 #mode {
@@ -92,12 +79,16 @@ button:hover {
 #idle_inhibitor,
 #scratchpad,
 #power-profiles-daemon,
+
 #mpd {
     padding: 0 10px;
     color: #ffffff;
 }
 
-#window,
+#window, {
+    color: #ffffff;
+}
+
 #workspaces {
     margin: 0 4px;
 }
@@ -113,17 +104,18 @@ button:hover {
 }
 
 #clock {
-    background-color: #64727D;
+    background-color: rgba(43, 48, 59, 0.2);
+    color: #ffffff;
 }
 
 #battery {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: rgba(43, 48, 59, 0.2);
+    color: #ffffff;
 }
 
 #battery.charging, #battery.plugged {
     color: #ffffff;
-    background-color: #26A65B;
+    background-color: rgba(43, 48, 59, 0.2);
 }
 
 @keyframes blink {
@@ -135,7 +127,7 @@ button:hover {
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
+    background-color: rgba(43, 48, 59, 0.2);
     color: #ffffff;
     animation-name: blink;
     animation-duration: 0.5s;
@@ -149,18 +141,18 @@ button:hover {
 }
 
 #power-profiles-daemon.performance {
-    background-color: #f53c3c;
-    color: #ffffff;
+    background-color: rgba(43, 48, 59, 0.2);
+    color: #ff0000;
 }
 
 #power-profiles-daemon.balanced {
-    background-color: #2980b9;
+    background-color: rgba(43, 48, 59, 0.2);
     color: #ffffff;
 }
 
 #power-profiles-daemon.power-saver {
-    background-color: #2ecc71;
-    color: #000000;
+    background-color: rgba(43, 48, 59, 0.2);
+    color: #2ecc71;
 }
 
 label:focus {
@@ -168,82 +160,96 @@ label:focus {
 }
 
 #cpu {
-    background-color: #2ecc71;
-    color: #000000;
+    background-color: rgba(43, 48, 59, 0.2);
+    color: #ffffff;
 }
 
 #memory {
-    background-color: #9b59b6;
+    background-color: rgba(43, 48, 59, 0.2);
+    color: #ffffff;
 }
 
 #disk {
-    background-color: #964B00;
+    background-color: rgba(43, 48, 59, 0.2);
+    color: #ffffff;
 }
 
 #backlight {
-    background-color: #90b1b1;
+    background-color: rgba(43, 48, 59, 0.2);
+    color: #ffffff;
 }
 
 #network {
-    background-color: #2980b9;
+    background-color: rgba(43, 48, 59, 0.2);
+    color: #ffffff;
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
+    background-color: rgba(43, 48, 59, 0.2);
+    color: #f53c3c;
 }
 
 #pulseaudio {
-    background-color: #f1c40f;
-    color: #000000;
+    background-color: rgba(43, 48, 59, 0.2);
+    color: #ffffff;
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
+    background-color: rgba(43, 48, 59, 0.2);
+    color: #ffffff;
 }
 
 #wireplumber {
-    background-color: #fff0f5;
-    color: #000000;
+    background-color: rgba(43, 48, 59, 0.2);
+    color: #ffffff;
 }
 
 #wireplumber.muted {
-    background-color: #f53c3c;
+    background-color: rgba(43, 48, 59, 0.2);
+    color: #ffffff;
 }
 
 #custom-media {
-    background-color: #66cc99;
-    color: #2a5c45;
+    background-color: rgba(43, 48, 59, 0.2);
+    color: #ffffff;
     min-width: 100px;
 }
 
 #custom-media.custom-spotify {
-    background-color: #66cc99;
+    background-color: rgba(43, 48, 59, 0.2);
+    color: #ffffff;
 }
 
 #custom-media.custom-vlc {
-    background-color: #ffa000;
+    background-color: rgba(43, 48, 59, 0.2);
+    color: #ffffff;
 }
 
 #temperature {
-    background-color: #f0932b;
+    background-color: border-radius: 0px 10px 10px 0px;
+    color: #ffffff;
 }
 
 #temperature.critical {
-    background-color: #eb4d4b;
+    background-color: border-radius: 0px 10px 10px 0px;
+    color: #ff0000;
 }
 
 #tray {
-    background-color: #2980b9;
+    background-color: rgba(43, 48, 59, 0.2);
+    border-radius: 0px 10px 10px 0px;
 }
 
 #tray > .passive {
     -gtk-icon-effect: dim;
+    background-color: rgba(43, 48, 59, 0.2);
+    border-radius: 0px 10px 10px 0px;
 }
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
     background-color: #eb4d4b;
+    border-radius: 0px 10px 10px 0px;
 }
 
 #idle_inhibitor {
@@ -273,7 +279,7 @@ label:focus {
 }
 
 #language {
-    background: #00b093;
+    background: rgba(43, 48, 59, 0.2);
     color: #740864;
     padding: 0 5px;
     margin: 0 5px;
@@ -281,7 +287,7 @@ label:focus {
 }
 
 #keyboard-state {
-    background: #97e1ad;
+    background: rgba(43, 48, 59, 0.2);
     color: #000000;
     padding: 0 0px;
     margin: 0 5px;
@@ -314,13 +320,13 @@ label:focus {
 }
 
 #privacy-item.screenshare {
-    background-color: #cf5700;
+    background-color: rgba(43, 48, 59, 0.2);
 }
 
 #privacy-item.audio-in {
-    background-color: #1ca000;
+    background-color: rgba(43, 48, 59, 0.2);
 }
 
 #privacy-item.audio-out {
-    background-color: #0069d4;
+    background-color: rgba(43, 48, 59, 0.2);
 }
