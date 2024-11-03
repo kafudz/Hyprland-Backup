@@ -1,26 +1,32 @@
+[colors.primary]
+background = "#2b303b"
+foreground = "#ffffff"
+
 [font]
 size = 10.0
 
 [font.bold]
-family = "monospace"
+family = "jetbrains mono"
 style = "Bold"
 
 [font.bold_italic]
-family = "monospace"
+family = "jetbrains mono"
 style = "Bold Italic"
 
 [font.italic]
-family = "monospace"
+family = "jetbrains mono"
 style = "Italic"
 
 [font.normal]
-family = "monospace"
+family = "jetbrains mono"
 style = "Regular"
 
 [window]
 padding = { x = 15, y = 15 }
-opacity = 0.5
+opacity = 0.6
 decorations = "None"
+title = "Alacritty"
+dynamic_title = true
 
 [cursor]
 blink_interval = 500
