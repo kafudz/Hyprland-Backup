@@ -2,7 +2,7 @@
 {
 //  "layer": "top", // Waybar at top layer
 //  "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 34, // Waybar height (to be removed for auto height)
+    "height": 32, // Waybar height (to be removed for auto height)
     "width": 1900, // Waybar width
     "margin-top": 10,
     "spacing": 0, // Gaps between modules (4px)
@@ -42,16 +42,17 @@
     "clock": {
         // "timezone": "Asia/Jakarta",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format-alt": "{:%Y-%m-%d}",
+        "format": "{} WIB ⏰"
     },
   
     "cpu": {
-        "format": "{usage}% ",
+        "format": "{usage}% 🖥️",
         "tooltip": false
     },
   
     "memory": {
-        "format": "{}% "
+        "format": "{}% 💽"
     },
   
     "temperature": {
@@ -60,7 +61,7 @@
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format-icons": ["", "🌡️", ""]
     },
   
     "backlight": {
@@ -78,29 +79,29 @@
         "format": "{capacity}% {icon}",
         "format-full": "{capacity}% {icon}",
         "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
+        "format-plugged": "{capacity}% 🔌",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["🪫", "🔋"]
     },
   
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon}  {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
+        "format-bluetooth-muted": "🔇 {icon} {format_source}",
+        "format-muted": "🔇 {format_source}",
+        "format-source": "{volume}% 🎤",
         "format-source-muted": "",
         "format-icons": {
-            "headphone": "",
+            "headphone": "🎧",
             "hands-free": "",
             "headset": "",
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", "", ""]
+            "default": ["🔈", "🔉", "🔊"]
         },
         "on-click": "pavucontrol"
     },
