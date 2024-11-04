@@ -1,7 +1,7 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: JetBrainsMono, FontAwesome, sans-serif;
-    font-size: 14px;
+    font-family: JetBrainsMono, FontAwesome;
+    font-size: 13px;
 }
 window {
     background-color: rgba(43, 48, 59, 0.5);
@@ -9,31 +9,29 @@ window {
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 button {
     /* Use box-shadow instead of border so the text isn't offset */
     box-shadow: inset 0 -3px transparent;
     /* Avoid rounded borders under each button name */
-    border: 10px rgba(43, 48, 59, 0.2);
+    border: 5px rgba(43, 48, 59, 0.2);
     border-radius: 0px;
 }
 
 #workspaces {
-    margin: 0px 10px;
-    padding: 0px 10px;
+    border-radius: 5px 0px 0px 5px;
+    margin: 4px 0px 4px 0px;
 }
 
 #workspaces button {
     background-color: transparent;
     color: #ffffff;
-    border-radius: 0px;
 }
 
 #workspaces button:hover {
     background: transparent;
-    border-radius: 0px;
 }
 
 #workspaces button.active {
@@ -49,35 +47,38 @@ button {
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
-    margin-left: 0px;
+    margin-left: 5px;
     background-color: rgba(43, 48, 59, 0.2);
-    border-radius: 10px 0px 0px 10px;
 }
 
 /* If workspaces is the rightmost module, omit right margin */
 .modules-right > widget:last-child > #workspaces {
-    margin-right: 00px;
+    margin-right: 0px;
     background-color: rgba(43, 48, 59, 0.2);
 }
 
 #clock {
     background-color: rgba(43, 48, 59, 0.2);
-    border-radius: 0px;
+    border-radius: 5px;
     color: #ffffff;
-    min-width: 70px;
+    padding: 0px 10px;
+    margin: 4px 4px 4px 4px;
 }
 
 #battery {
     background-color: rgba(43,48,59, 0.2);
     color: #ffffff;
-    border-radius: 0px;
-    min-width: 60px;
+    border-radius: 5px;
+    margin: 4px 4px 4px 4px;
+    padding: 0 10px;
 }
 
 #battery.charging, #battery.plugged {
     color: #ffffff;
     background-color: rgba(43, 48, 59, 0.2);
-    border-radius: 0px;
+    border-radius: 5px;
+    margin: 4px 4px 4px 4px;
+    padding: 0 10px;
 }
 
 @keyframes blink {
@@ -96,102 +97,133 @@ button {
     animation-timing-function: steps(12);
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    margin: 4px 4px 4px 4px;
+    padding: 0 10px;
+    border-radius: 5px;
 }
 
 label:focus {
     background-color: rgba(43, 48, 59, 0.2);
     color: #ffffff;
+    margin: 4px 4px 4px 4px;
+    padding: 0 10px;
 }
 
 #cpu {
     background-color: rgba(43, 48, 59, 0.2);
     color: #ffffff;
-    border-radius: 0px;
-    min-width: 50px;
+    border-radius: 5px;
+    margin: 4px 4px 4px 4px;
+    padding: 0 10px;
 }
 
 #memory {
     background-color: rgba(43, 48, 59, 0.2);
     color: #ffffff;
-    border-radius: 0px;
-    min-width: 50px;
+    border-radius: 5px;
+    margin: 4px 4px 4px 4px;
+    padding: 0 10px;
 }
 
 #disk {
     background-color: rgba(43, 48, 59, 0.2);
     color: #ffffff;
-    border-radius: 0px;
-    min-width: 50px;
+    border-radius: 5px;
+    margin: 4px 4px 4px 4px;
+    padding: 0 10px;
 }
 
 #backlight {
     background-color: rgba(43, 48, 59, 0.2);
     color: #ffffff;
-    border-radius: 0px;
-    min-width: 70px;
+    border-radius: 5px;
+    margin: 4px 4px 4px 4px;
+    padding: 0 10px;
 }
 
 /* you can set a style on hover for any module like this */
 #pulseaudio:hover {
     background-color: rgba(43, 48, 59, 0.2);
     color: #ffffff;
+    padding: 0 10px;
+    border-radius: 5px;
 }
 
 #pulseaudio {
     background-color: rgba(43, 48, 59, 0.2);
     color: #ffffff;
-    border-radius: 0px 0px 0px 0px;
-    min-width: 80px;
+    border-radius: 5px;
+    margin: 4px 4px 4px 4px;
     padding: 0 10px;
 }
 
 #pulseaudio.muted {
     background-color: rgba(43, 48, 59, 0.2);
     color: #ffffff;
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 5px;
+    margin: 4px 4px 4px 4px;
+    padding: 0 10px;
 }
 
 #wireplumber {
     background-color: rgba(43, 48, 59, 0.2);
     color: #ffffff;
+    margin: 4px 4px 4px 4px;
+    padding: 0 10px;
+    border-radius: 5px;
 }
 
 #wireplumber.muted {
     background-color: rgba(43, 48, 59, 0.2);
-    color: #ffffff
+    color: #ffffff;
+    margin: 4px 4px 4px 4px;
+    padding: 0 10px;
+    border-radius: 5px;
 }
 
 #temperature {
     background-color: rgba(43, 48, 59, 0.2);
     color: #ffffff;
-    border-radius: 0px;
-    min-width: 70px;
+    border-radius: 5px;
+    margin: 4px 4px 4px 4px;
+    padding: 0 10px;
 }
 
 #temperature.critical {
     background-color: rgba(43, 48, 59, 0.2);
     color: #ff0000;
-    border-radius: 0px;
+    border-radius: 5px;
+    margin: 4px 4px 4px 4px;
+    padding: 0 10px;
 }
 
 #tray {
+    margin: 4px 4px 4px 4px;
+    padding: 0 10px;
     background-color: rgba(43, 48, 59, 0.2);
-    border-radius: 0px 0px 0px 0px;
+    border-radius: 5px;
 }
 
 #tray > .passive {
     -gtk-icon-effect: dim;
     background-color: rgba(43, 48, 59, 0.2);
+    padding: 0 10px;
+    border-radius: 5px;
+    margin: 4px 4px 4px 4px;
 }
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
     background-color: #eb4d4b;
+    padding: 0 10px;
+    border-radius: 5px;
+    margin: 4px 4px 4px 4px;
 }
 
 #custom-power {
     background-color: rgba(43, 48, 59, 0.2);
     color: #ff0000;
-    border-radius: 0px 10px 10px 0px;
-    min-width: 40px;
+    border-radius: 0px 5px 5px 0px;
+    padding: 0px 10px;
+    margin: 4px 4px 4px 4px;
 }
