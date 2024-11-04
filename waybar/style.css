@@ -5,7 +5,7 @@
     min-height: 0;
     border: none;
 }
-window {
+window#waybar {
     background-color: rgba(43, 48, 59, 0.5);
     border-bottom: 2px transparent;
     color: #ffffff;
@@ -45,6 +45,10 @@ button {
 #workspaces button.urgent {
     background-color: transparent;
     color: #eb4d4b;
+}
+
+#window {
+     padding-left: 10px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
