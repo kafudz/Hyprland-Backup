@@ -226,6 +226,15 @@ label:focus {
     margin: 4px 4px 4px 4px;
 }
 
+#custom-keyboard {
+    background-color: rgba(43, 48, 59, 0.2);
+    color: #ffffff;
+    padding: 0px 10px 0px 10px;
+    margin: 4px 4px 4px 4px;
+    border-radius: 5px;
+    min-width: 16px;
+}
+
 #custom-power {
     background-color: rgba(43, 48, 59, 0.2);
     color: #ff0000;
