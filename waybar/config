@@ -1,7 +1,7 @@
 // -*- mode: jsonc -*-
 {
 //  "layer": "top", // Waybar at top layer
-//  "position": "top", // Waybar position (top|bottom|left|right)
+    "position": "top", // Waybar position (top|bottom|left|right)
     "height": 34, // Waybar height (to be removed for auto height)
     "width": 1900, // Waybar width
     "margin-top": 10,
@@ -12,7 +12,8 @@
         "hyprland/window"
     ],
     "modules-right": [
-        "custom/keyboard-state",
+        "keyboard-state",
+//      "custom/keyboard-state",
         "pulseaudio",
         "cpu",
         "memory",
@@ -30,11 +31,24 @@
          "warp-on-scroll": false,
          "format": "{name}: {icon}",
          "format-icons": {
+          // "urgent": "",
+          // "active": "",
+          // "default": ""
              "urgent": "😡",
-             "active": "🙂",
+             "active": "😎",
              "default": "😐"
          }
-     },
+    },
+  
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "🔐",
+            "unlocked": "🔓"
+        }
+    },
   
     "tray": {
         "spacing": 10
@@ -94,7 +108,7 @@
         "format-bluetooth-muted": "🔇 {icon} {format_source}",
         "format-muted": "🔇 {format_source}",
         "format-source": "{volume}% 🎤",
-        "format-source-muted": "",
+        "format-source-muted": "🙊",
         "format-icons": {
             "headphone": "🎧",
             "hands-free": "",
@@ -106,13 +120,14 @@
         },
         "on-click": "pavucontrol"
     },
-
-    "custom/keyboard-state": {
-        "format": "{}",
-        "interval": 1,
-        "exec": "~/.config/waybar/capslock-state.py /dev/input/event3 sound-off"
-        },
-
+    
+//    "custom/keyboard-state": {
+//        "format": "{}",
+//        "interval": 1,
+//        "tooltip": false,
+//        "exec": "~/.config/waybar/capslock-state.py /dev/input/event3 sound-off"
+//        },
+  
     "custom/power": {
         "format" : "🉐",
 		"tooltip": false,
