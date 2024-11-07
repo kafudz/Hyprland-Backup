@@ -105,7 +105,13 @@
         },
         "on-click": "pavucontrol"
     },
-  
+
+    "custom/keyboard-state": {
+        "format": "{}",
+        "interval": 1,
+        "exec": "~/.config/waybar/capslock-state.py /dev/input/event3 sound-off"
+        },
+
     "custom/power": {
         "format" : "🉐",
 		"tooltip": false,
