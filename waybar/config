@@ -13,7 +13,6 @@
     ],
     "modules-right": [
         "keyboard-state",
-//      "custom/keyboard-state",
         "pulseaudio",
         "cpu",
         "memory",
@@ -31,9 +30,6 @@
          "warp-on-scroll": false,
          "format": "{name}: {icon}",
          "format-icons": {
-          // "urgent": "",
-          // "active": "",
-          // "default": ""
              "urgent": "😡",
              "active": "😎",
              "default": "😐"
