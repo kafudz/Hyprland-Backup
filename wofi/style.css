@@ -5,13 +5,13 @@
 window {
     margin: 0px;
     padding: 10px;
-    border-radius: 8px;
-    background-color: rgba(43, 48, 59, 0.8);
+    border-radius: 5px;
+    background-color: rgba(43, 48, 59, 0.5);
 }
 
 #input {
     margin: 5px;
-    border-radius: 8px;
+    border-radius: 5px;
     border: none;
     border-bottom: 3px;
     background-color: #31363b;
@@ -22,34 +22,37 @@ window {
     margin: 5px;
     padding: 10px;
     border: none;
-    background-color: rgba(43, 48, 59, 0.8);
-    border-radius: 8px;
+    background-color: rgba(43, 48, 59, 0.5);
+    border-radius: 5px;
 }
 
 #outer-box {
     margin: 5px;
     padding:5px;
-    background-color: rgba(43, 48, 59, 0.8);
-    border-radius: 8px;
+    background-color: rgba(43, 48, 59, 0.5);
+    border-radius: 5px;
 }
 
 #scroll {
     margin: 0px;
     padding: 10px;
     border: none;
+    border-radius: 5px;
 }
 
 #text {
     padding: 2px;
     color: white;
+    border-radius: 5px;
 }
 
 #entry:nth-child(even){
     background-color: #31363b;
+    border-radius: 5px;
 }
 
 #entry:selected {
-    border-radius: 8px;
+    border-radius: 5px;
     border: 0.11em solid;
     background-color: #3daee9;
 }
