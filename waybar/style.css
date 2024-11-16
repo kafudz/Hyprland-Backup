@@ -1,7 +1,7 @@
 * {
 /* `otf-font-awesome` is required to be installed for icons */
-font-family: JetBrainMono, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-font-size: 13px;
+    font-family: JetBrainMono, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
 }
 
 window#waybar {
@@ -9,7 +9,7 @@ window#waybar {
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
 window#waybar.hidden {
@@ -74,7 +74,7 @@ button:hover {
     padding: 0 10px;
     margin: 4px 4px;
     color: #000000;
-    border-radius: 3px;
+    border-radius: 4px;
     background-color: #ffffff;
 }
 
@@ -86,9 +86,9 @@ button:hover {
     margin: 4px 0px;
 }
 #custom-power{
-    border-radius: 0px 3px 3px 0px;
+    border-radius: 0px 4px 4px 0px;
     padding: 0px 10px;
-    background-color: #fcfafa;
+    background-color: #ffffff;
     color: #ff0000;
     margin: 4px 4px;
 }
@@ -109,8 +109,8 @@ button:hover {
 }
 
 #battery.charging, #battery.plugged {
-color: #ffffff;
-background-color: #26A65B;
+    color: #ffffff;
+    background-color: #26A65B;
 }
 
 @keyframes blink {
@@ -122,13 +122,13 @@ background-color: #26A65B;
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-background-color: #f53c3c;
-color: #ffffff;
-animation-name: blink;
-animation-duration: 0.5s;
-animation-timing-function: steps(12);
-animation-iteration-count: infinite;
-animation-direction: alternate;
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 label:focus {
@@ -163,11 +163,10 @@ label:focus {
 }
 
 #temperature.critical {
-background-color: #eb4d4b;
+    background-color: #eb4d4b;
 }
 
 #tray {
-    background-color: rgba(43, 48, 59, 0.9);
 }
 
 #tray > .passive {
@@ -175,17 +174,17 @@ background-color: #eb4d4b;
 }
 
 #tray > .needs-attention {
--gtk-icon-effect: highlight;
-background-color: #eb4d4b;
+    -gtk-icon-effect: highlight;
+     background-color: #eb4d4b;
 }
 
 #keyboard-state {
-min-width: 16px;
+    min-width: 16px;
 }
 
 #keyboard-state > label {
 }
 
 #keyboard-state > label.locked {
-color: #ff0000;
+    color: #ff0000;
 }
