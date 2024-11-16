@@ -3,9 +3,9 @@
     // "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
     "height": 34, // Waybar height (to be removed for auto height)
-    "width": 1900, // Waybar width
+    "width": 1908, // Waybar width
     "spacing": 0, // Gaps between modules (4px)
-    "margin-top": 10,
+    "margin-top": 5,
     // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
