@@ -5,11 +5,11 @@
 }
 
 window#waybar {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.4);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
-    border-radius: 4px;
+    border-radius: 3px;
 }
 
 window#waybar.hidden {
@@ -74,7 +74,7 @@ button:hover {
     padding: 0 10px;
     margin: 4px 4px;
     color: #000000;
-    border-radius: 4px;
+    border-radius: 3px;
     background-color: #ffffff;
 }
 
@@ -86,7 +86,7 @@ button:hover {
     margin: 4px 0px;
 }
 #custom-power{
-    border-radius: 0px 4px 4px 0px;
+    border-radius: 0px 3px 3px 0px;
     padding: 0px 10px;
     background-color: #ffffff;
     color: #ff0000;
@@ -176,6 +176,7 @@ label:focus {
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
      background-color: #eb4d4b;
+     border-radius: 3px;
 }
 
 #keyboard-state {
