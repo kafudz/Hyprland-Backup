@@ -1,5 +1,5 @@
 * {
-  font-family: 'JetBrainMono', monospace;
+  font-family: 'JetBrainsMono', monospace;
   font-size: 12px;
 }
 window {
@@ -54,6 +54,6 @@ window {
 #entry:selected {
     border-radius: 5px;
     border: 0.11em solid;
-    background-color: #07f2ee;
+    background-color: rgba(80, 80, 80, 0.5);
     color: #ffffff;
 }
