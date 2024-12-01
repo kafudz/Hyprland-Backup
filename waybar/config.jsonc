@@ -5,20 +5,20 @@
     "height": 34, // Waybar height (to be removed for auto height)
     "width": 1908, // Waybar width
     "spacing": 0, // Gaps between modules (4px)
-    "margin-top": 5,
+    "margin-top": 2,
     // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
         "hyprland/window",
     ],
     "modules-right": [
-        "pulseaudio",
         "cpu",
         "memory",
         "disk",
         "temperature",
         "backlight",
         "keyboard-state",
+        "pulseaudio",
         "battery",
         "clock",
         "tray",
@@ -59,15 +59,15 @@
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": "{usage}% ",
+        "format": "{usage}%  ",
         "tooltip": false
     },
     "memory": {
         "format": "{}%  "
     },
     "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "thermal-zone": 2,
+        "hwmon-path": "/sys/class/thermal/thermal_zone1/temp",
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
@@ -86,12 +86,12 @@
         },
         "format": "{capacity}% {icon}",
         "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
+        "format-charging": "{capacity}%  ",
+        "format-plugged": "{capacity}%  ",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": [" ", " ", " ", " ", " "]
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
@@ -100,15 +100,15 @@
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
         "format-source": "{volume}% ",
-        "format-source-muted": "",
+        "format-source-muted": " ",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
+            "headphone": "  ",
+            "hands-free": "  ",
+            "headset": "  ",
+            "phone": "  ",
+            "portable": "  ",
+            "car": "  ",
+            "default": ["  ", "   ", "   "]
         },
         "on-click": "pavucontrol"
     },
