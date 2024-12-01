@@ -2,8 +2,8 @@
 TERM = "xterm-256color"
 
 [colors.primary]
-foreground = "#2b303b"
-background = "#ededed"
+foreground = "#ededed"
+background = "#2b303b"
 
 [font]
 size = 9.0
