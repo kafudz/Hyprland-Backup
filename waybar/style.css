@@ -1,11 +1,11 @@
 * {
 /* `otf-font-awesome` is required to be installed for icons */
-    font-family: JetBrainMono, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
 }
 
 window#waybar {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(75, 75, 75, 0.5);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -32,15 +32,16 @@ button:hover {
 
 /* you can set a style on hover for any module like this */
 #pulseaudio:hover {
-    background-color: #a37800;
+    background-color: #07f2ee;
+    color: #000000;
 }
 
 #workspaces button {
     padding: 0 10px;
-    background-color: #fcfafa;
-    color: #000000;
+    background-color: #2b303b;
+    color: #fcfafa;
     border-radius: 3px;
-    margin: 0px 4px;
+    margin: 0px 3px;
 }
 
 #workspaces button:hover {
@@ -48,7 +49,8 @@ button:hover {
 }
 
 #workspaces button.active {
-    background-color: #07f2ee;
+    background-color: #2b303b;
+    color: #07f2ee;
 }
 
 #workspaces button.urgent {
@@ -72,15 +74,17 @@ button:hover {
 #keyboard-state,
 #tray {
     padding: 0 10px;
-    margin: 4px 4px;
-    color: #000000;
+    margin: 3px 3px;
+    color: #ffffff;
     border-radius: 3px;
-    background-color: #ffffff;
+    background-color: #2b303b;
 }
 
 #window {
     padding-left: 10px;
+    /* color: #2b303b;*/
     color: #ffffff;
+    font-family: JetBrainsMono;
 }
 #workspaces {
     margin: 4px 0px;
@@ -88,9 +92,9 @@ button:hover {
 #custom-power{
     border-radius: 0px 3px 3px 0px;
     padding: 0px 10px;
-    background-color: #ffffff;
+    background-color: #2b303b;
     color: #ff0000;
-    margin: 4px 4px;
+    margin: 3px 3px;
 }
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
