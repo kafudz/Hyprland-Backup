@@ -1,76 +1,70 @@
 // -*- mode: jsonc -*-
 {
     // "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 34, // Waybar height (to be removed for auto height)
-    "width": 1908, // Waybar width
-    "spacing": 0, // Gaps between modules (4px)
-    "margin-top": 2,
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 37, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    // "spacing": 4, // Gaps between modules (4px)
+    //"margin": 5,
     // Choose the order of the modules
     "modules-left": [
-        "hyprland/workspaces",
-        "hyprland/window",
+        "custom/os_button",
+        "sway/workspaces",
+        "sway/mode",
+        "sway/window"
     ],
+//    "modules-center": [
+//    ],
     "modules-right": [
-        "cpu",
-        "memory",
-        "disk",
-        "temperature",
-        "backlight",
+	    "temperature",
         "keyboard-state",
         "pulseaudio",
+        "backlight",
         "battery",
         "clock",
         "tray",
         "custom/power"
     ],
     // Modules configuration
-       "hyprland/workspaces": {
+    "sway/workspaces": {
            "disable-scroll": true,
            "all-outputs": true,
            "warp-on-scroll": false,
            "format": "{name}: {icon}",
            "format-icons": {
-               "urgent": "",
-               "active": "",
-               "default": ""
-           }
-       },
+               "urgent": " ",
+               "focused": " ",
+               "default": " "              
+          }
+    },
     "keyboard-state": {
-        "numlock": true,
+        "numlock": false,
         "capslock": true,
-        "format": "{name} {icon}",
+        "format": " {icon} ",
         "format-icons": {
-            "locked": "  ",
-            "unlocked": "  "
+            "locked": "",
+            "unlocked": ""
         }
     },
-    "disk": {
-	"interval": 30,
-	"format": "🖴 {percentage_free}% free {path}",
-	},
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
     "tray": {
-        // "icon-size": 21,
+        "icon-size": 16,
         "spacing": 10
     },
     "clock": {
         "timezone": "Asia/Jakarta",
+	"format-alt": "{:%A, %d %B %Y - %H:%M WIB}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
-    },
-    "cpu": {
-        "format": "{usage}%  ",
-        "tooltip": false
-    },
-    "memory": {
-        "format": "{}%  "
+        "format": "{:%H:%M WIB}"
     },
     "temperature": {
-        "thermal-zone": 2,
+        "thermal-zone": 1,
         "hwmon-path": "/sys/class/thermal/thermal_zone1/temp",
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C",
         "format-icons": ["", "", ""]
     },
     "backlight": {
@@ -86,34 +80,49 @@
         },
         "format": "{capacity}% {icon}",
         "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}%  ",
-        "format-plugged": "{capacity}%  ",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": [" ", " ", " ", " ", " "]
+        //"format-icons": ["", "", "", "", ""]
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} -- {format_source}",
+        "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
         "format-source": "{volume}% ",
-        "format-source-muted": " ",
+        "format-source-muted": "",
         "format-icons": {
-            "headphone": "  ",
-            "hands-free": "  ",
-            "headset": "  ",
-            "phone": "  ",
-            "portable": "  ",
-            "car": "  ",
-            "default": ["  ", "   ", "   "]
+            "headphone": " ",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [" ", " ", " "]
         },
         "on-click": "pavucontrol"
     },
+    "custom/os_button": {
+        "format": "",
+        "on-click": "wofi --show drun",
+        "tooltip": false
+    },
     "custom/power": {
-        "format" : " ⏻ ",
+        "format" : "  ⏻  ",
 		"tooltip": false,
 		"menu": "on-click",
 		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
