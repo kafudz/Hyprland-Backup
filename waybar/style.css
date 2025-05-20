@@ -5,9 +5,8 @@
 }
 
 window#waybar {
-    background-color: rgba(23, 23, 23, 1.0);
+    background-color: rgba(15, 15, 15, 1.0);
     border: 1px solid rgba(196, 24, 24, 0.5);
-    color: #fc8158;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -57,7 +56,8 @@ button:hover {
 
 #mode {
     background-color: rgba(255, 0, 9, 0.5);
-    box-shadow: inset 0 -1px #fdc7c9;
+    box-shadow: inset 0 1px #fdc7c9;
+    margin: 3px 0;
 }
 
 #battery,
@@ -66,12 +66,11 @@ button:hover {
 #pulseaudio,
 #wireplumber,
 #mode {
-    color: #fc8158;
     padding: 0 10px;
 }
 
 #window {
-    color: #fc8158;
+    color: #FF0000;
     padding-left: 20px;
 }
 #workspaces {
@@ -92,14 +91,21 @@ button:hover {
 }
 
 #clock {
-    color: #fc8158;
+	background-color: rgba (13, 13, 13, 0.5);
+    border: 1px solid rgba(35, 35, 35, 1.0);
     padding: 0 10px;
-    border-top: 1px solid rgba(255, 0, 238, 1.0);
+    margin: 1px 0px 3px 0px;
+    box-shadow: inset 0 1px #ff00ee;
+    color: #fc8158;
 }
 
 #battery {
-   color: #fc8158;
-   border-top: 1px solid rgba(255, 255, 0, 0.8);
+	background-color: rgba (13, 13, 13, 0.5);
+    border: 1px solid rgba(35, 35, 35, 1.0);
+    padding: 0 10px;
+    margin: 1px 0px 3px 0px;
+    box-shadow: inset 0 1px #ffff00;
+    color: #fc8158;
 }
 
 #battery.charging, #battery.plugged {
@@ -130,13 +136,20 @@ label:focus {
 }
 
 #backlight {
-  color: #fc8158;
-  border-top: 1px solid rgba(0, 255, 0, 0.8);
+	background-color: rgba (13, 13, 13, 0.5);
+    border: 1px solid rgba(35, 35, 35, 1.0);
+    padding: 0 10px;
+    margin: 1px 0px 3px 0px;
+    box-shadow: inset 0 1px #00ff00;
+    color: #fc8158;
 }
 
 #pulseaudio {
-   border-top: 1px solid rgba(0, 0, 255, 0.8);
-   color: #fc8158;
+	background-color: rgba (13, 13, 13, 0.5);
+    border: 1px solid rgba(35, 35, 35, 1.0);
+    margin: 1px 0px 3px 0px;
+    box-shadow: inset 0 1px #0000ff;
+    color: #fc8158;
 }
 
 #pulseaudio.muted {
@@ -152,18 +165,29 @@ label:focus {
     background-color: #f53c3c;
 }
 #temperature {
-    border-top: 1px solid rgba(255, 255, 255, 1.0);
+	background-color: rgba (13, 13, 13, 0.5);
+    border: 1px solid rgba(35, 35, 35, 1.0);
+    padding: 0 10px;
+    margin: 1px 0px 3px 0px;
+    box-shadow: inset 0 1px #ff7300;
     color: #fc8158;
 }
 
 #temperature.critical {
     background-color: #eb4d4b;
-    border-top: 3px solid rgba(35, 35, 35, 1.0);
+    border: 1px solid rgba(35, 35, 35, 1.0);
+    padding: 0 10px;
+    margin: 2px 0px 3px 0px;
+    box-shadow: inset 0 1px #ff7300;
+    color: #fc8158;
 }
 
 #tray {
-    border-top: 1px solid rgba(0, 255, 255, 1.0);
+	background-color: rgba (13, 13, 13, 0.5);
+    border: 1px solid rgba(35, 35, 35, 1.0);
     padding: 0 10px;
+    margin: 1px 0px 3px 0px;
+    box-shadow: inset 0 1px #00ffff;
 }
 
 #tray > .passive {
@@ -178,30 +202,48 @@ label:focus {
 }
 
 #keyboard-state > label {
-   padding: 0 10px;
-   border-top: 1px solid rgba(255, 64, 0, 0.8);
+	font-size: 16px;
+    padding: 0 5px;
+    background-color: rgba (13, 13, 13, 0.5);
+    border: 1px solid rgba(35, 35, 35, 1.0);
+    margin: 1px 0px 3px 0px;
+    box-shadow: inset 0 1px #ff4000;
+    color: #fc8158;
 }
 
 #keyboard-state > label.locked {
     color: #ff0000;
 }
 #custom-os_button {
-  font-family: "IosevkaNerdFont";
-  font-size: 13px;
-  padding-left: 12px;
-  padding-right: 18px;
-  background-color: rgba (13, 13, 13, 0.5);
-  color: #FC8158;
-  transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-  border: 1px solid rgba(35, 35, 35, 1.0);
-  margin: 2px;
+    font-family: "IosevkaNerdFont";
+    font-size: 16px;
+    padding-left: 15px;
+    padding-right: 20px;
+    background-color: rgba (13, 13, 13, 0.5);
+    color: #FF0000;
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid rgba(35, 35, 35, 1.0);
+    margin: 2px;
 }
 #custom-os_button:hover {
-  background:  rgba (255, 0, 9, 0.8);
-  color: #fc8158;
+    background:  rgba (255, 0, 9, 0.8);
+    color: #fc8158;
+}
+#language {
+    background: rgba (255, 0, 9, 0.8);
+    background-color: rgba (13, 13, 13, 0.5);
+    border: 1px solid rgba(35, 35, 35, 1.0);
+    color: #FC8158;
+    padding: 0 10px;
+    margin: 2px 0;
 }
 #custom-power {
-   border-top: 1px solid rgba(255, 255, 255, 0.8);
-   color: #ff0000;
-   padding-right: 5px;
+    color: #ff0000;
+    font-size: 16px;
+    background: rgba (255, 0, 9, 0.8);
+    background-color: rgba (13, 13, 13, 0.5);
+    border: 1px solid rgba(35, 35, 35, 1.0);
+    margin: 1px 3px 3px 3px;
+    box-shadow: inset 0 1px #ffffff;
+    padding: 0 15px;
 }
