@@ -19,6 +19,7 @@
     "modules-right": [
 	    "temperature",
         "keyboard-state",
+        "custom/storage",
         "pulseaudio",
         "backlight",
         "battery",
@@ -56,9 +57,9 @@
     },
     "clock": {
         "timezone": "Asia/Jakarta",
-	"format-alt": "{:%A, %d %B %Y - %H:%M WIB}",
+	    "format-alt": "   {:%A, %d %B %Y -   %H:%M WIB}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:%H:%M WIB}"
+        "format": "󰥔  {:%H:%M WIB}"
     },
     "temperature": {
         "thermal-zone": 1,
@@ -117,7 +118,19 @@
         },
         "on-click": "pavucontrol"
     },
-    "custom/os_button": {
+    "custom/storage": {
+        "format": "  {}",
+        "format-alt": "{percentage}% ",
+        "format-alt-click": "click-right",
+        "return-type": "json",
+        "interval": 60,
+        "exec": "~/.config/waybar/storage.sh"
+    },
+    "sway/language": {
+		"format": "  {}",
+		"tooltip": false
+	},
+	"custom/os_button": {
         "format": "",
         "on-click": "wofi --show drun",
         "tooltip": false
