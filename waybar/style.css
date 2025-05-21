@@ -243,7 +243,7 @@ label:focus {
     background: rgba (255, 0, 9, 0.8);
     background-color: rgba (13, 13, 13, 0.5);
     border: 1px solid rgba(35, 35, 35, 1.0);
-    margin: 1px 3px 3px 3px;
+    margin: 1px 3px 3px 0;
     box-shadow: inset 0 1px #ffffff;
     padding: 0 15px;
 }
