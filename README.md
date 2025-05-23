@@ -1,5 +1,2 @@
 ## My Hyprdot
-
-![]()
-
-![]()
+Yah Begitulah
