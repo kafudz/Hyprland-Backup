@@ -35,8 +35,8 @@ button:hover {
 
 #workspaces button {
     padding: 0 10px;
-    background-color: rgba (54, 45, 45, 0.5);
-    color: #fc8158;
+    background-color: rgba(16, 16, 16, 1.0);
+    color: #ff4d4d;
     border: 1px solid rgba(35, 35, 35, 1.0);
 }
 
@@ -44,9 +44,9 @@ button:hover {
     background: rgba (255, 0, 9, 0.5);
 }
 
-#workspaces button.focused {
+#workspaces button.active {
     color: #ff0000;
-    background-color: rgba(16, 16, 16, 1.0);
+    background-color: rgba (13, 13, 13, 0.5);
 }
 
 #workspaces button.urgent {
@@ -62,24 +62,15 @@ button:hover {
     margin: 3px 0;
 }
 
-#battery,
-#temperature,
-#backlight,
-#pulseaudio,
-#wireplumber,
-#mode {
-    padding: 0 10px;
-}
-
 #window {
-    color: #FF0000;
+    color: #FF4d4d;
     padding-left: 20px;
 }
 #workspaces {
     color: #fc8158;
-    background-color: #000000;
-    border: 1px solid rgba(23, 23, 23, 1.0);
-    margin: 1px;
+    background-color: #171717;
+    border: 1px solid rgba(35, 35, 35, 1.0);
+    margin: 1px 1px 2px 1px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -96,18 +87,16 @@ button:hover {
     background-color: rgba (13, 13, 13, 0.5);
     border: 1px solid rgba(35, 35, 35, 1.0);
     padding: 0 10px;
-    margin: 1px 0px 3px 0px;
-    box-shadow: inset 0 1px #ff00ee;
-    color: #fc8158;
+    margin: 2px 1px 2px 0px;
+    color: #ff4d4d;
 }
 
 #battery {
     background-color: rgba (13, 13, 13, 0.5);
     border: 1px solid rgba(35, 35, 35, 1.0);
     padding: 0 10px;
-    margin: 1px 0px 3px 0px;
-    box-shadow: inset 0 1px #ffff00;
-    color: #fc8158;
+    margin: 2px 1px 2px 0px;
+    color: #ff4d4d;
 }
 
 #battery.charging, #battery.plugged {
@@ -123,14 +112,14 @@ button:hover {
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ff0000;
+    background-color: #eb4d4b;
+    color: #ffffff;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    margin: 1px;
+    margin: 4px;
 }
 
 label:focus {
@@ -141,17 +130,16 @@ label:focus {
     background-color: rgba (13, 13, 13, 0.5);
     border: 1px solid rgba(35, 35, 35, 1.0);
     padding: 0 10px;
-    margin: 1px 0px 3px 0px;
-    box-shadow: inset 0 1px #00ff00;
-    color: #fc8158;
+    margin: 2px 1px 2px 0px;
+    color: #ff4d4d;
 }
 
 #pulseaudio {
     background-color: rgba (13, 13, 13, 0.5);
     border: 1px solid rgba(35, 35, 35, 1.0);
-    margin: 1px 0px 3px 0px;
-    box-shadow: inset 0 1px #0000ff;
-    color: #fc8158;
+    margin: 2px 1px 2px 0px;
+    color: #ff4d4d;
+    padding: 0 10px;
 }
 
 #pulseaudio.muted {
@@ -170,26 +158,24 @@ label:focus {
     background-color: rgba (13, 13, 13, 0.5);
     border: 1px solid rgba(35, 35, 35, 1.0);
     padding: 0 10px;
-    margin: 1px 0px 3px 0px;
-    box-shadow: inset 0 1px #ff7300;
-    color: #fc8158;
+    margin: 2px 1px 2px 0px;
+    color: #ff4d4d;
 }
 
 #temperature.critical {
     background-color: #eb4d4b;
     border: 1px solid rgba(35, 35, 35, 1.0);
     padding: 0 10px;
-    margin: 2px 0px 3px 0px;
+    margin: 4px;
     box-shadow: inset 0 1px #ff7300;
-    color: #fc8158;
+    color: #ffffff;
 }
 
 #tray {
     background-color: rgba (13, 13, 13, 0.5);
     border: 1px solid rgba(35, 35, 35, 1.0);
     padding: 0 10px;
-    margin: 1px 0px 3px 0px;
-    box-shadow: inset 0 1px #00ffff;
+    margin: 2px 1px 2px 0px;
 }
 
 #tray > .passive {
@@ -208,21 +194,20 @@ label:focus {
     padding: 0 5px;
     background-color: rgba (13, 13, 13, 0.5);
     border: 1px solid rgba(35, 35, 35, 1.0);
-    margin: 1px 0px 3px 0px;
-    box-shadow: inset 0 1px #ff4000;
-    color: #fc8158;
+    margin: 2px 1px 2px 0px;
+    color: #ff4d4d;
 }
 
 #keyboard-state > label.locked {
-    color: #ff0000;
+	background-color: #eb4d4b;
+    color: #ffffff;
 }
 #custom-storage{
     background-color: rgba (13, 13, 13, 0.5);
     border: 1px solid rgba(35, 35, 35, 1.0);
     padding: 0 10px;
-    margin: 1px 0px 3px 0px;
-    box-shadow: inset 0 1px #964B00;
-    color: #fc8158;
+    margin: 2px 0px 2px 0px;
+    color: #ff4d4d;
 }
 #custom-os_button {
     font-family: "IosevkaNerdFont";
@@ -237,23 +222,20 @@ label:focus {
 }
 #custom-os_button:hover {
     background:  rgba (255, 0, 9, 0.8);
-    color: #fc8158;
+    color: #ffffff;
 }
 #language {
-    background: rgba (255, 0, 9, 0.8);
     background-color: rgba (13, 13, 13, 0.5);
     border: 1px solid rgba(35, 35, 35, 1.0);
-    color: #FC8158;
+    color: #FF4D4D;
     padding: 0 10px;
     margin: 2px 0;
 }
 #custom-power {
-    color: #ff0000;
+    color: #ff4d4d;
     font-size: 16px;
-    background: rgba (255, 0, 9, 0.8);
     background-color: rgba (13, 13, 13, 0.5);
     border: 1px solid rgba(35, 35, 35, 1.0);
-    margin: 1px 3px 3px 0;
-    box-shadow: inset 0 1px #ffffff;
+    margin: 2px 3px 2px 0;
     padding: 0 15px;
 }
