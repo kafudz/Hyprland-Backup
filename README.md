@@ -1,4 +1,4 @@
-## Backup Hyprland config
+## My Hyprdot
 
 ![]()
 
