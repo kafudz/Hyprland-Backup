@@ -3,21 +3,21 @@
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 38, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
+    "width": 1900, // Waybar width
     // "spacing": 4, // Gaps between modules (4px)
-    //"margin": 5,
+    "margin-top": 10,
     // Choose the order of the modules
     "modules-left": [
         "custom/os_button",
-        "sway/language",
-        "sway/workspaces",
-        "sway/mode",
-        "sway/window"
+        "hyprland/language",
+        "hyprland/workspaces",
+//      "sway/mode",
+        "hyprland/window"
     ],
 //    "modules-center": [
 //    ],
     "modules-right": [
-	    "temperature",
+        "temperature",
         "keyboard-state",
         "custom/storage",
         "pulseaudio",
@@ -28,14 +28,14 @@
         "custom/power"
     ],
     // Modules configuration
-    "sway/workspaces": {
+    "hyprland/workspaces": {
            "disable-scroll": true,
            "all-outputs": true,
            "warp-on-scroll": false,
            "format": "{name}: {icon}",
            "format-icons": {
                "urgent": " ",
-               "focused": " ",
+               "active": " ",
                "default": " "              
           }
     },
@@ -127,10 +127,10 @@
         "exec": "~/.config/waybar/storage.sh"
     },
     "sway/language": {
-		"format": "  {}",
-		"tooltip": false
-	},
-	"custom/os_button": {
+	"format": "  {}",
+	"tooltip": false
+    },
+    "custom/os_button": {
         "format": "",
         "on-click": "wofi --show drun",
         "tooltip": false
