@@ -1,6 +1,6 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, IosevkaNerdFont, Roboto, Helvetica, Arial, sans-serif;
+    font-family: FontAwesome, "JetBrainsMono Nerd Font", IosevkaNerdFont, Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
 }
 
@@ -9,6 +9,7 @@ window#waybar {
     border: 1px solid rgba(196, 24, 24, 0.5);
     transition-property: background-color;
     transition-duration: .5s;
+    border-radius: 1px;
 }
 
 window#waybar.hidden {
@@ -30,7 +31,8 @@ button:hover {
 
 /* you can set a style on hover for any module like this */
 #pulseaudio:hover {
-    background-color: rgba (255, 0, 9 ,0.5);
+    background-color: rgba (255, 0, 9, 0.5);
+    color: #c0aeae;
 }
 
 #workspaces button {
@@ -45,8 +47,8 @@ button:hover {
 }
 
 #workspaces button.active {
-    color: #ff0000;
-    background-color: rgba (13, 13, 13, 0.5);
+    background-color:  rgba (186, 0, 0, 0.8);
+    color: #c0aeae;
 }
 
 #workspaces button.urgent {
@@ -63,7 +65,7 @@ button:hover {
 }
 
 #window {
-    color: #FF4d4d;
+    color: #ec4f55;
     padding-left: 20px;
 }
 #workspaces {
