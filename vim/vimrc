@@ -1,8 +1,8 @@
-set nocompatible
 filetype on
 filetype plugin on
 filetype indent on
 syntax on
+set nocompatible
 set number
 set cursorline
 set cursorcolumn
@@ -22,3 +22,5 @@ set hlsearch
 set history=1000
 set wildmenu
 set wildmode=list:longest
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor = "latex"
