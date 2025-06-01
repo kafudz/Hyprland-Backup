@@ -16,9 +16,9 @@
 //    "modules-center": [
 //    ],
     "modules-right": [
-		"temperature",
-		"custom/weather",
-		"keyboard-state",
+	"temperature",
+	"custom/weather",
+	"keyboard-state",
         "custom/storage",
         "disk",
         "pulseaudio",
@@ -62,7 +62,7 @@
 	},
     "clock": {
         "timezone": "Asia/Jakarta",
-	    "format-alt": "   {:%A, %d %B %Y -   %H:%M WIB}",
+	"format-alt": "   {:%A, %d %B %Y -   %H:%M WIB}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format": "󰥔  {:%H:%M WIB}"
     },
@@ -131,15 +131,15 @@
         "exec": "~/.config/waybar/storage.sh"
     },
     "custom/weather": {
-		"format": "  {}°C",
-		"tooltip": true,
-		"interval": 3600,
-		"exec": "/usr/bin/wttrbar --location situ-enda",
-		"return-type": "json"
-	},
+	"format": "  {}°C",
+	"tooltip": true,
+	"interval": 3600,
+	"exec": "/usr/bin/wttrbar --location situ-enda",
+	"return-type": "json"
+    },
     "hyprland/language": {
-		"tooltip": false,
-		"format": "  {short}"
+	"tooltip": false,
+	"format": "  {short}"
     },
     "custom/os_button": {
         "format": "",
