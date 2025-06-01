@@ -1,19 +1,19 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, JetBrainsMono Nerd Font, IosevkaNerdFont, Roboto, Helvetica, Arial, sans-serif;
+    font-family: FontAwesome, JetBrainsMono Nerd Font Medium, IosevkaNerdFont, Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
 }
 
 window#waybar {
-    background-color: rgba(15, 15, 15, 1.0);
-    border: 1px solid rgba(196, 24, 24, 0.5);
+    background-color: rgba(15, 15, 15, 0.9);
+    border: 1px solid rgba(196, 24, 24, 1.0);
     transition-property: background-color;
     transition-duration: .5s;
-    border-radius: 1px;
+    border-radius: 5px;
 }
 
 window#waybar.hidden {
-    opacity: 0.2;
+    opacity: 1.0;
 }
 
 button {
@@ -36,10 +36,11 @@ button:hover {
 }
 
 #workspaces button {
-    padding: 0 10px;
+    padding: 0 5px;
     background-color: rgba(16, 16, 16, 1.0);
     color: #ff4d4d;
     border: 1px solid rgba(35, 35, 35, 1.0);
+    margin: 1px 1px;
 }
 
 #workspaces button:hover {
@@ -49,6 +50,7 @@ button:hover {
 #workspaces button.active {
     background-color:  rgba (186, 0, 0, 0.8);
     color: #c0aeae;
+    margin: 1px 1px;
 }
 
 #workspaces button.urgent {
@@ -66,8 +68,9 @@ button:hover {
 
 #window {
     color: #ec4f55;
-    padding-left: 20px;
+    padding-left: 10px;
 }
+
 #workspaces {
     color: #fc8158;
     background-color: #171717;
@@ -156,6 +159,7 @@ label:focus {
 #wireplumber.muted {
     background-color: #f53c3c;
 }
+
 #temperature {
     background-color: rgba (13, 13, 13, 0.5);
     border: 1px solid rgba(35, 35, 35, 1.0);
@@ -196,14 +200,18 @@ label:focus {
     padding: 0 5px;
     background-color: rgba (13, 13, 13, 0.5);
     border: 1px solid rgba(35, 35, 35, 1.0);
-    margin: 2px 1px 2px 0px;
+    margin: 2px 1px;
     color: #ff4d4d;
 }
 
 #keyboard-state > label.locked {
 	background-color: #eb4d4b;
     color: #ffffff;
+    font-size: 15px;
+    padding: 0 5px;
+    margin: 2px 1px;
 }
+
 #custom-storage{
     background-color: rgba (13, 13, 13, 0.5);
     border: 1px solid rgba(35, 35, 35, 1.0);
@@ -211,6 +219,15 @@ label:focus {
     margin: 2px 0px 2px 0px;
     color: #ff4d4d;
 }
+
+#custom-weather{
+	padding: 0 10px;
+	color: #ff4d4d;
+	background-color: rgba (13, 13, 13, 0.5);
+    border: 1px solid rgba(35, 35, 35, 1.0);
+    margin: 2px 0;
+}
+
 #custom-os_button {
     font-family: "IosevkaNerdFont";
     font-size: 16px;
@@ -220,12 +237,23 @@ label:focus {
     color: #FF0000;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
     border: 1px solid rgba(35, 35, 35, 1.0);
+    border-radius: 5px 1px 1px 5px;
     margin: 2px;
 }
+
 #custom-os_button:hover {
     background:  rgba (255, 0, 9, 0.8);
     color: #ffffff;
 }
+
+#disk{
+	background-color: rgba (13, 13, 13, 0.5);
+    border: 1px solid rgba(35, 35, 35, 1.0);
+    color: #FF4D4D;
+    padding: 0 5px;
+    margin: 2px 0;
+}
+
 #language {
     background-color: rgba (13, 13, 13, 0.5);
     border: 1px solid rgba(35, 35, 35, 1.0);
@@ -233,11 +261,13 @@ label:focus {
     padding: 0 10px;
     margin: 2px 0;
 }
+
 #custom-power {
     color: #ff4d4d;
     font-size: 16px;
     background-color: rgba (13, 13, 13, 0.5);
     border: 1px solid rgba(35, 35, 35, 1.0);
+    border-radius: 1px 5px 5px 1px;
     margin: 2px 3px 2px 0;
     padding: 0 15px;
 }
