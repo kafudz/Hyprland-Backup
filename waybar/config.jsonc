@@ -2,7 +2,7 @@
 {
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 38, // Waybar height (to be removed for auto height)
+    "height": 37, // Waybar height (to be removed for auto height)
     "width": 1900, // Waybar width
     // "spacing": 4, // Gaps between modules (4px)
     "margin-top": 10,
@@ -11,15 +11,16 @@
         "custom/os_button",
         "hyprland/language",
         "hyprland/workspaces",
-//      "sway/mode",
         "hyprland/window"
     ],
 //    "modules-center": [
 //    ],
     "modules-right": [
-        "temperature",
-        "keyboard-state",
+		"temperature",
+		"custom/weather",
+		"keyboard-state",
         "custom/storage",
+        "disk",
         "pulseaudio",
         "backlight",
         "battery",
@@ -29,32 +30,36 @@
     ],
     // Modules configuration
     "hyprland/workspaces": {
-           "disable-scroll": true,
-           "all-outputs": true,
-           "warp-on-scroll": false,
-           "format": "{name}: {icon}",
-           "format-icons": {
-               "urgent": " ",
-               "active": " ",
-               "default": " "              
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{name}: {icon}",
+        "format-icons": {
+            "urgent": " ",
+            "active": " ",
+            "default": " "              
           }
     },
     "keyboard-state": {
         "numlock": false,
         "capslock": true,
-        "format": " {icon} ",
+        "format": "{icon}",
         "format-icons": {
-            "locked": " ",
-            "unlocked": " "
+            "locked": " AA  ",
+            "unlocked": " aa  "
         }
     },
-    "sway/mode": {
+    "hyprland/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
     "tray": {
         "icon-size": 16,
         "spacing": 10
     },
+    "disk": {
+		"format": "   {used}",
+		"tooltip": "true"
+	},
     "clock": {
         "timezone": "Asia/Jakarta",
 	    "format-alt": "   {:%A, %d %B %Y -   %H:%M WIB}",
@@ -66,12 +71,11 @@
         "hwmon-path": "/sys/class/thermal/thermal_zone1/temp",
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{icon} {temperatureC}°C",
+        "format": "  {temperatureC}°C {icon}",
         "format-icons": ["", "", ""]
     },
     "backlight": {
-        // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
+        "format": " {percent}% {icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
@@ -82,7 +86,7 @@
         },
         "format": "{capacity}% {icon}",
         "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
+        "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
@@ -93,11 +97,11 @@
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
+        "format-ethernet": "{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-alt": "{ifname}: {cidr}"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
@@ -126,9 +130,16 @@
         "interval": 60,
         "exec": "~/.config/waybar/storage.sh"
     },
-    "sway/language": {
-	"format": "  {}",
-	"tooltip": false
+    "custom/weather": {
+		"format": "  {}°C",
+		"tooltip": true,
+		"interval": 3600,
+		"exec": "/usr/bin/wttrbar --location situ-enda",
+		"return-type": "json"
+	},
+    "hyprland/language": {
+		"tooltip": false,
+		"format": "  {short}"
     },
     "custom/os_button": {
         "format": "",
