@@ -16,15 +16,14 @@
 //    "modules-center": [
 //    ],
     "modules-right": [
-	"temperature",
-	"custom/weather",
-	"keyboard-state",
-        "custom/storage",
+		"temperature",
+		"keyboard-state",
         "disk",
         "pulseaudio",
         "backlight",
         "battery",
         "clock",
+        "custom/weather",
         "tray",
         "custom/power"
     ],
@@ -33,11 +32,11 @@
         "disable-scroll": true,
         "all-outputs": true,
         "warp-on-scroll": false,
-        "format": "{name}: {icon}",
+        "format": "{icon}",
         "format-icons": {
-            "urgent": " ",
-            "active": " ",
-            "default": " "              
+            "urgent": "  ",
+            "active": "  ",
+            "default": "  "              
           }
     },
     "keyboard-state": {
@@ -46,7 +45,7 @@
         "format": "{icon}",
         "format-icons": {
             "locked": " AA  ",
-            "unlocked": " aa  "
+            "unlocked": " aa  "
         }
     },
     "hyprland/mode": {
@@ -57,12 +56,12 @@
         "spacing": 10
     },
     "disk": {
-		"format": "   {used}",
+		"format": "   {used} -   {free}",
 		"tooltip": "true"
 	},
     "clock": {
         "timezone": "Asia/Jakarta",
-	"format-alt": "   {:%A, %d %B %Y -   %H:%M WIB}",
+	    "format-alt": "   {:%A, %d %B %Y -   %H:%M WIB}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format": "󰥔  {:%H:%M WIB}"
     },
@@ -122,32 +121,24 @@
         },
         "on-click": "pavucontrol"
     },
-    "custom/storage": {
-        "format": "  {}",
-        "format-alt": "{percentage}% ",
-        "format-alt-click": "click-right",
-        "return-type": "json",
-        "interval": 60,
-        "exec": "~/.config/waybar/storage.sh"
-    },
     "custom/weather": {
-	"format": "  {}°C",
-	"tooltip": true,
-	"interval": 3600,
-	"exec": "/usr/bin/wttrbar --location situ-enda",
-	"return-type": "json"
-    },
+		"format": "  {}°C",
+		"tooltip": true,
+		"interval": 900,
+		"exec": "/usr/bin/wttrbar --location situ-enda --nerd",
+		"return-type": "json"
+	},
     "hyprland/language": {
-	"tooltip": false,
-	"format": "  {short}"
+		"tooltip": false,
+		"format": "  {short}"
     },
     "custom/os_button": {
-        "format": "",
+        "format": "  ",
         "on-click": "wofi --show drun",
         "tooltip": false
     },
     "custom/power": {
-        "format" : "⏻",
+        "format" : "",
 		"tooltip": false,
 		"menu": "on-click",
 		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
