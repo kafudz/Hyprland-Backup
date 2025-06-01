@@ -110,8 +110,8 @@ button:hover {
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: #000000;
+    	background-color: #ffffff;
+    	color: #000000;
     }
 }
 
@@ -221,9 +221,9 @@ label:focus {
 }
 
 #custom-weather{
-	padding: 0 10px;
-	color: #ff4d4d;
-	background-color: rgba (13, 13, 13, 0.5);
+    padding: 0 10px;
+    color: #ff4d4d;
+    background-color: rgba (13, 13, 13, 0.5);
     border: 1px solid rgba(35, 35, 35, 1.0);
     margin: 2px 0;
 }
@@ -247,7 +247,7 @@ label:focus {
 }
 
 #disk{
-	background-color: rgba (13, 13, 13, 0.5);
+    background-color: rgba (13, 13, 13, 0.5);
     border: 1px solid rgba(35, 35, 35, 1.0);
     color: #FF4D4D;
     padding: 0 5px;
